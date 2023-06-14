@@ -1,3 +1,3 @@
 # My Package
 
-This is a simple package for greeting people.
+This is a simple package for utility functions
