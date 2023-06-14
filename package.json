@@ -1,0 +1,22 @@
+{
+  "name": "utilix-latest-bs",
+  "version": "1.0.1",
+  "description": "This package provides utility functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/divyjainjd/my-package.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Divy Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/divyjainjd/my-package/issues"
+  },
+  "homepage": "https://github.com/divyjainjd/my-package#readme"
+}
