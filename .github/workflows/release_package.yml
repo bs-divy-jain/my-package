@@ -19,7 +19,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add package.json
           git commit -m "Bumped version"
-          git push
+          git push origin main
 
   publish-npm:
     needs: version-bump
