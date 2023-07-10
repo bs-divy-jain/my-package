@@ -18,10 +18,9 @@ jobs:
           echo ${{ secrets.PAT }}
           git config --global user.name 'divy jain'
           git config --global user.email 'divyjainjs@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY
-          git checkout "${GITHUB_REF:11}"
+          git remote set-url origin https://${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY
           git commit -am "Automated report"
-          git push
+          git push origin main
 
   publish-npm:
     needs: version-bump
