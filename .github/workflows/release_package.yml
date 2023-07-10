@@ -15,10 +15,11 @@ jobs:
       - run: npm run version:bump
 
       - run: |
-          git config --global user.name 'divy jain'
-          git config --global user.email 'divyjainjd@users.noreply.github.com'
-          git commit -am "Automated report"
-          git push origin main
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add package.json
+          git commit -m "Bump version to ${GITHUB_REF##*/}"
+          git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git HEAD:${GITHUB_REF##*/}
 
   publish-npm:
     needs: version-bump
