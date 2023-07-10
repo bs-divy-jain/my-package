@@ -12,7 +12,14 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: npm run production
+      - run: npm run version:bump
+
+      - run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add package.json
+          git commit -m "Bumped version"
+          git push
 
   publish-npm:
     needs: version-bump
