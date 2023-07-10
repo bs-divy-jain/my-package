@@ -1,6 +1,6 @@
 {
   "name": "utilix-latest-bs",
-  "version": "1.0.13",
+  "version": "1.0.0",
   "description": "This package provides utility functions",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
