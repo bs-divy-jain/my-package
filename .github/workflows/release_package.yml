@@ -15,8 +15,8 @@ jobs:
       - run: npm run version:bump
 
       - run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions"
           git add package.json
           git commit -m "Bumped version"
           git push origin main
