@@ -1,7 +1,7 @@
 {
   "name": "test-actions-bs",
   "version": "1.0.4",
-  "description": "This package provides utility functions",
+  "description": "This package provides utility functionsd",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
