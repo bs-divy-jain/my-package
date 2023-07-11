@@ -49,6 +49,8 @@ jobs:
             git push origin release
             git checkout main
             git pull origin release
+            git commit -am "Automated Commmit with Github Actions for Version-Bump & Version-Add"
+            git push origin main
 
         # Publish the package to the npm registry
         - name: Publish to npm
