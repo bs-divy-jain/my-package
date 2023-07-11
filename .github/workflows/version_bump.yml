@@ -1,7 +1,7 @@
 name: Version bump for the package
 on:
   pull_request:
-    types: [opened, updated]
+    types: [opened, edited, synchronize]
     branches:
       - 'main'
 permissions:
