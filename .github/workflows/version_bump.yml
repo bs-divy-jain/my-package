@@ -24,4 +24,4 @@ jobs:
           git remote set-url origin https://${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY
           git add .
           git commit -am "Automated Commmit with Github Actions"
-          git push origin head
+          git push origin release
