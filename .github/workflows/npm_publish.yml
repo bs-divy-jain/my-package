@@ -49,9 +49,6 @@ jobs:
             git push origin release
 
         # Publish the package to the npm registry
-
-        # Only run the job if the pull request is merged
-        if: github.event.pull_request.merged == true
         - name: Publish to npm
           run: npm publish
           env:
