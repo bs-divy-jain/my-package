@@ -21,6 +21,7 @@ jobs:
           git config --global user.name 'divy jain'
           git config --global user.email 'divyjainjs@users.noreply.github.com'
           git remote set-url origin https://${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY
+          git checkout release
           git add .
           git commit -am "Automated Commmit with Github Actions"
           git push origin head
