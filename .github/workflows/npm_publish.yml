@@ -8,6 +8,11 @@ on:
     branches:
       - 'main'
 
+# Specify permissions for the workflow
+# This grants write access to the contents of the repository
+permissions:
+  contents: write
+
 jobs:
   publish-npm:
       # Only run the job if the pull request is merged
