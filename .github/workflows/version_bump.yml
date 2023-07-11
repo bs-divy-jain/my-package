@@ -24,4 +24,3 @@ jobs:
           git checkout release
           git add .
           git commit -am "Automated Commmit with Github Actions"
-          git push
