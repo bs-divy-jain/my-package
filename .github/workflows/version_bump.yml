@@ -1,0 +1,27 @@
+name: Version bump for the package
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - 'main'
+permissions:
+  contents: write
+jobs:
+  version-bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm run version:bump
+
+      - run: |
+          echo ${{ secrets.PAT }}
+          git config --global user.name 'divy jain'
+          git config --global user.email 'divyjainjs@users.noreply.github.com'
+          git remote set-url origin https://${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY
+          git add .
+          git commit -am "Automated Commmit with Github Actions"
+          git push head
