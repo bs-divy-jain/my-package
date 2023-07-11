@@ -11,11 +11,40 @@ on:
 jobs:
   publish-npm:
       # Only run the job if the pull request is merged
-      if: github.event.pull_request.merged == true
+      # if: github.event.pull_request.merged == true
       runs-on: ubuntu-latest
 
       steps:
         # Checkout the project repository
+
+        - name: Checkout repository
+          uses: actions/checkout@v3 
+
+        # Setup Node.js environment
+        - name: Setup Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: 16
+
+        # Run version bump script
+        - name: Run version bump    
+          run: npm run version:bump
+
+        # Extract and add version to minified file
+        - name: Run version add
+          run: npm run version:add
+
+        # Configure Git and commit changes
+        - name: Configure Git and commit changes
+          run: |
+            git config --global user.name 'Automated Publishing Bot'
+            git config --global user.email 'action@github.com'
+            git fetch origin release:release
+            git checkout release
+            git add .
+            git commit -am "Automated Commmit with Github Actions for Version-Bump & Version-Add"
+            git push origin release
+   
         - name: Checkout repository
           uses: actions/checkout@v3
 
