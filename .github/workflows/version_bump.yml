@@ -1,8 +1,7 @@
 name: Version bump for the package
 on:
   pull_request:
-    types:
-      - opened
+    types: [opened, updated]
     branches:
       - 'main'
 permissions:
@@ -24,4 +23,4 @@ jobs:
           git remote set-url origin https://${{ secrets.PAT }}@github.com/$GITHUB_REPOSITORY
           git add .
           git commit -am "Automated Commmit with Github Actions"
-          git push origin release
+          git push origin head
