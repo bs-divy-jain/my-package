@@ -29,7 +29,8 @@ jobs:
 
         # Transpile the typescript files and minify javascript files
         - name: Run minifyTs & minifyJs  
-          run: npm run production
+          run: |
+            npm run production
 
         # Run version bump script
         - name: Run version bump    
