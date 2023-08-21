@@ -27,6 +27,12 @@ jobs:
           with:
             node-version: 16
 
+        # Transpile the typescript files and minify javascript files
+        - name: Run minifyTs & minifyJs  
+          run: |
+            npm run build
+            npm run production
+
         # Run version bump script
         - name: Run version bump    
           run: npm run version:bump
