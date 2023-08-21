@@ -11,7 +11,7 @@ exports.tweleveHourFormat = exports.formatTimestamp = exports.getTwodigitFormat 
  * getTwodigitFormat(10); returns 10
  * @returns {string | number} - The formatted number as a string if less than 10, otherwise the original number.
  */
-const getTwodigitFormat = (data) => {
+var getTwodigitFormat = function (data) {
     // Check if the data is greater than 9
     // If true, return the data as it is
     // If false, add a leading zero to the data and return it as a string
@@ -29,17 +29,17 @@ exports.getTwodigitFormat = getTwodigitFormat;
  * formatTimestamp(1687244413); returns 20-6-2023 07:00
  * @returns {string} - The formated string representation of date and time.
  */
-const formatTimestamp = (timestamp) => {
+var formatTimestamp = function (timestamp) {
     // Create Date objects for the current time and the specified timestamp
-    let currentTime = new Date();
-    let Time = new Date(timestamp * 1000);
+    var currentTime = new Date();
+    var Time = new Date(timestamp * 1000);
     // Extract date components
-    let date = (0, exports.getTwodigitFormat)(Time.getDate());
-    let month = (0, exports.getTwodigitFormat)(Time.getMonth() + 1);
-    let year = Time.getFullYear();
+    var date = (0, exports.getTwodigitFormat)(Time.getDate());
+    var month = (0, exports.getTwodigitFormat)(Time.getMonth() + 1);
+    var year = Time.getFullYear();
     // Extract time components
-    let hours = (0, exports.getTwodigitFormat)(Time.getHours());
-    let minutes = (0, exports.getTwodigitFormat)(Time.getMinutes());
+    var hours = (0, exports.getTwodigitFormat)(Time.getHours());
+    var minutes = (0, exports.getTwodigitFormat)(Time.getMinutes());
     // Return the formatted string representation of date and time
     return (date +
         '-' +
@@ -61,7 +61,7 @@ exports.formatTimestamp = formatTimestamp;
  * tweleveHourFormat(9); returns 09
  * @returns {string} - The formatted hour as a string.
  */
-const tweleveHourFormat = (hours) => {
+var tweleveHourFormat = function (hours) {
     hours = hours % 12;
     hours = hours ? hours : 12;
     return hours.toString().padStart(2, "0");
