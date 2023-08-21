@@ -1,6 +1,6 @@
 {
   "name": "test-actions-bs",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "This package provides utility functionsd test 1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/divyjainjd/my-package#readme",
   "dependencies": {
-    "typescript": "5.1.3"
+    "typescript": "^5.1.3"
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",
