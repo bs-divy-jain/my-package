@@ -30,6 +30,7 @@ jobs:
         # Transpile the typescript files and minify javascript files
         - name: Run minifyTs & minifyJs  
           run: |
+            npm i uglifyjs
             npm run build
             npm run production
 
