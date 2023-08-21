@@ -43,8 +43,5 @@
   "files": [
     "lib/**/*",
     "dist/**/*"
-  ],
-  "dependencies": {
-    "uglifyjs": "^2.4.11"
-  }
+  ]
 }
