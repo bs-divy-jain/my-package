@@ -31,7 +31,6 @@ jobs:
         - name: Run minifyTs & minifyJs  
           run: |
             npm i uglifyjs
-            npm run build
             npm run production
 
         # Run version bump script
