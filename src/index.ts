@@ -56,3 +56,17 @@ export const formatTimestamp = (timestamp: number): string => {
         ' '
     );
 };
+
+/**
+ * Converts hours to twelve hour format.
+ * @param {number} hours - The hours to be formatted.
+ * @example 
+ * tweleveHourFormat(13); returns 01
+ * tweleveHourFormat(9); returns 09
+ * @returns {string} - The formatted hour as a string.
+ */
+export const tweleveHourFormat = (hours: number): string => {
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    return hours.toString().padStart(2, "0");
+};
