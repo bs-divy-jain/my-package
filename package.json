@@ -1,6 +1,6 @@
 {
   "name": "test-actions-bs",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "This package provides utility functionsd test 1",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -40,7 +40,7 @@
     "husky": "^8.0.3",
     "mocha": "^10.2.0",
     "ts-node": "^10.9.1",
-    "uglify-js": "^3.17.3"
+    "uglify-js": "^3.17.4"
   },
   "files": [
     "lib/**/*",
